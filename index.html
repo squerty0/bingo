@@ -99,6 +99,20 @@
             transform: rotateZ(0deg);
         }
 
+        h1{
+            color: white;
+            margin: 20px;
+            font-weight: 900;
+            font-size: min(6vw, 70px);
+            background: url(bg.jpg);
+            /* background-size: cover; */
+            background-attachment: fixed;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 1px 1px rgba(0,0,0,0.4);
+        }
+
         @media screen and (max-width: 720px) {
             .bingo-cell > label{
                 font-size: 10px;
@@ -115,15 +129,11 @@
             }
         }
 
-        h1{
-            color: white;
-            margin: 20px;
-        }
 
     </style>
 </head>
 <body>
-    <h1>Zbójcerzowe bingo</h1>
+    <h1>ZBÓJCERZOWE BINGO</h1>
     <div class="bingo-sheet">
         <div class="bingo-cell"><input type="checkbox" id="cb-01"/><label for="cb-01"></label><div class="checked-box"><img/></div></div>
         <div class="bingo-cell"><input type="checkbox" id="cb-02"/><label for="cb-02"></label><div class="checked-box"><img/></div></div>
