@@ -11,6 +11,10 @@
             height: 100%;
             padding: 0px;
             margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
         .bingo-sheet{
@@ -47,6 +51,8 @@
             width: 100%;
             z-index: 1;
             cursor: pointer;
+            background-color:  rgb(27, 27, 27);
+            user-select: none;
         }
 
         .bingo-cell:hover{
@@ -86,10 +92,11 @@
             display: flex;
         }
 
-        @media screen and (max-width: 780px) {
+        @media screen and (max-width: 720px) {
             .bingo-cell > label{
                 font-size: 10px;
                 font-weight: 100;
+                padding: 5px;
             }
 
             .checked-box{
