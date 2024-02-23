@@ -39,6 +39,7 @@
             position: relative;
             overflow: hidden;
             background-color:  rgb(27, 27, 27);
+            transition: background-color 0.4s ease-in-out;
         }
 
         .bingo-cell > label{
@@ -83,7 +84,8 @@
             right: 5px;
             left: 5px;
             opacity: 0;
-            transition: opacity 0.4s ease-in-out;
+            transform: rotateZ(180deg);
+            transition: all 0.4s ease-in-out;
         }
 
         .checked-box img{
@@ -94,6 +96,7 @@
 
         input[type=checkbox]:checked ~ .checked-box{
             opacity: 1;
+            transform: rotateZ(0deg);
         }
 
         @media screen and (max-width: 720px) {
@@ -122,31 +125,31 @@
 <body>
     <h1>Zbójcerzowe bingo</h1>
     <div class="bingo-sheet">
-        <div class="bingo-cell"><input type="checkbox" id="cb-01"/><label for="cb-01"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-02"/><label for="cb-02"></label><div class="checked-box"><img src="jarek.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-03"/><label for="cb-03"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-04"/><label for="cb-04"></label><div class="checked-box"><img src="jarek.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-05"/><label for="cb-05"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-06"/><label for="cb-06"></label><div class="checked-box"><img src="jarek.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-07"/><label for="cb-07"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-08"/><label for="cb-08"></label><div class="checked-box"><img src="jarek.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-09"/><label for="cb-09"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-10"/><label for="cb-10"></label><div class="checked-box"><img src="jarek.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-11"/><label for="cb-11"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-12"/><label for="cb-12"></label><div class="checked-box"><img src="jarek.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-13"/><label for="cb-13"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-14"/><label for="cb-14"></label><div class="checked-box"><img src="jarek.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-15"/><label for="cb-15"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-16"/><label for="cb-16"></label><div class="checked-box"><img src="jarek.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-17"/><label for="cb-17"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-18"/><label for="cb-18"></label><div class="checked-box"><img src="jarek.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-19"/><label for="cb-19"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-20"/><label for="cb-20"></label><div class="checked-box"><img src="jarek.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-21"/><label for="cb-21"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-22"/><label for="cb-22"></label><div class="checked-box"><img src="jarek.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-23"/><label for="cb-23"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-24"/><label for="cb-24"></label><div class="checked-box"><img src="jarek.JPG"/></div></div>
-        <div class="bingo-cell"><input type="checkbox" id="cb-25"/><label for="cb-25"></label><div class="checked-box"><img src="robert.JPG"/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-01"/><label for="cb-01"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-02"/><label for="cb-02"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-03"/><label for="cb-03"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-04"/><label for="cb-04"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-05"/><label for="cb-05"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-06"/><label for="cb-06"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-07"/><label for="cb-07"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-08"/><label for="cb-08"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-09"/><label for="cb-09"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-10"/><label for="cb-10"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-11"/><label for="cb-11"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-12"/><label for="cb-12"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-13"/><label for="cb-13"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-14"/><label for="cb-14"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-15"/><label for="cb-15"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-16"/><label for="cb-16"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-17"/><label for="cb-17"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-18"/><label for="cb-18"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-19"/><label for="cb-19"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-20"/><label for="cb-20"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-21"/><label for="cb-21"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-22"/><label for="cb-22"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-23"/><label for="cb-23"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-24"/><label for="cb-24"></label><div class="checked-box"><img/></div></div>
+        <div class="bingo-cell"><input type="checkbox" id="cb-25"/><label for="cb-25"></label><div class="checked-box"><img/></div></div>
     </div>
 
     <script>
@@ -158,7 +161,7 @@
             "Jarek rzuci papierem a plecy",
             "Mc Donald's nas nie sponsoruje",
             "Ktoś komuś przerwał x10",
-            "Jarek nie włoży kartył SIM",
+            "Jarek nie włożył karty SIM",
             "Robert poprawia kadr",
             "Koafiura x5",
             "Zapomnieli puścić czołówkę",
@@ -189,14 +192,34 @@
             "357"
         );
 
+        var imgs = Array(
+            "robert.JPG",
+            "robert1.JPG",
+            "robert2.JPG",
+            "jarek.JPG",
+            "jarek1.JPG",
+            "jarek2.JPG"
+        );
+        
+        var lastImg = imgs.length;
+
         var bingoOptionCpy = bingoOptions;
 
         var bingoCells = document.querySelectorAll(".bingo-cell > label");
+        var bingoImgs = document.querySelectorAll(".bingo-cell img");
 
         bingoCells.forEach(cell => {
             var index = rangedRandom(0, bingoOptions.length - 1);
             cell.innerHTML = bingoOptions[index];
             bingoOptions.splice(index, 1);
+        });
+
+        bingoImgs.forEach(img => {
+            var index = rangedRandom(0, imgs.length - 1);
+            while(index == lastImg) index = rangedRandom(0, imgs.length - 1);
+            lastImg = index;
+            img.src = imgs[index];
+
         });
 
         function rangedRandom(min, max) {
