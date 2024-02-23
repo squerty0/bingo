@@ -71,7 +71,7 @@
 
         .checked-box{
             position: absolute;
-            display: none;
+            display: flex;
             align-items: center;
             justify-content: center;
             border: 3px solid white;
@@ -82,15 +82,18 @@
             bottom: 5px;
             right: 5px;
             left: 5px;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
         }
 
         .checked-box img{
             max-width: 100%;
             opacity: 0.4;
+            filter: brightness(1.5);
         }
 
         input[type=checkbox]:checked ~ .checked-box{
-            display: flex;
+            opacity: 1;
         }
 
         @media screen and (max-width: 720px) {
@@ -155,7 +158,7 @@
             "Jarek rzuci papierem a plecy",
             "Mc Donald's nas nie sponsoruje",
             "Ktoś komuś przerwał x10",
-            "Jarek nie włoży karty SIM",
+            "Jarek nie włoży kartył SIM",
             "Robert poprawia kadr",
             "Koafiura x5",
             "Zapomnieli puścić czołówkę",
