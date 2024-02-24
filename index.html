@@ -60,7 +60,7 @@
         }
 
         .bingo-cell:hover{
-            background-color: rgb(88, 88, 88);
+            background-color: rgb(55, 55, 55);
         }
 
         .bingo-sheet > *:first-child {
@@ -131,6 +131,51 @@
             }
         }
 
+        .bingo-cell::after{
+            position: absolute;
+            content: "";
+            top: 4px;
+            bottom: 4px;
+            right: 4px;
+            left: 4px;
+            border-top: 5px solid #1b1b1b;
+            border-left: 5px solid #1b1b1b;
+            border-radius: 100px;
+            z-index: 0;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            animation: rotating 1s linear infinite;
+        }
+
+        .bingo-cell:hover::after{
+            border-top: 5px solid rgb(55, 55, 55);
+            border-left: 5px solid rgb(55, 55, 55);
+        }
+
+        .bingo-sheet:has(#cb-01:checked):has(#cb-02:checked):has(#cb-03:checked):has(#cb-04:checked):has(#cb-05:checked) .bingo-cell:has(#cb-01, #cb-02, #cb-03, #cb-04, #cb-05)::after,
+        .bingo-sheet:has(#cb-06:checked):has(#cb-07:checked):has(#cb-08:checked):has(#cb-09:checked):has(#cb-10:checked) .bingo-cell:has(#cb-06, #cb-07, #cb-08, #cb-09, #cb-10)::after,
+        .bingo-sheet:has(#cb-11:checked):has(#cb-12:checked):has(#cb-13:checked):has(#cb-14:checked):has(#cb-15:checked) .bingo-cell:has(#cb-11, #cb-12, #cb-13, #cb-14, #cb-15)::after,
+        .bingo-sheet:has(#cb-16:checked):has(#cb-17:checked):has(#cb-18:checked):has(#cb-19:checked):has(#cb-11:checked) .bingo-cell:has(#cb-16, #cb-17, #cb-18, #cb-19, #cb-20)::after,
+        .bingo-sheet:has(#cb-21:checked):has(#cb-22:checked):has(#cb-23:checked):has(#cb-24:checked):has(#cb-25:checked) .bingo-cell:has(#cb-21, #cb-22, #cb-23, #cb-24, #cb-25)::after,
+        .bingo-sheet:has(#cb-01:checked):has(#cb-06:checked):has(#cb-11:checked):has(#cb-16:checked):has(#cb-21:checked) .bingo-cell:has(#cb-01, #cb-06, #cb-11, #cb-16, #cb-21)::after,
+        .bingo-sheet:has(#cb-02:checked):has(#cb-07:checked):has(#cb-12:checked):has(#cb-17:checked):has(#cb-22:checked) .bingo-cell:has(#cb-02, #cb-07, #cb-12, #cb-17, #cb-22)::after,
+        .bingo-sheet:has(#cb-03:checked):has(#cb-08:checked):has(#cb-13:checked):has(#cb-18:checked):has(#cb-23:checked) .bingo-cell:has(#cb-03, #cb-08, #cb-13, #cb-18, #cb-23)::after,
+        .bingo-sheet:has(#cb-04:checked):has(#cb-09:checked):has(#cb-14:checked):has(#cb-19:checked):has(#cb-24:checked) .bingo-cell:has(#cb-04, #cb-09, #cb-14, #cb-19, #cb-24)::after,
+        .bingo-sheet:has(#cb-05:checked):has(#cb-10:checked):has(#cb-15:checked):has(#cb-20:checked):has(#cb-25:checked) .bingo-cell:has(#cb-05, #cb-10, #cb-15, #cb-20, #cb-25)::after,
+        .bingo-sheet:has(#cb-01:checked):has(#cb-07:checked):has(#cb-13:checked):has(#cb-19:checked):has(#cb-25:checked) .bingo-cell:has(#cb-01, #cb-07, #cb-13, #cb-19, #cb-25)::after,
+        .bingo-sheet:has(#cb-05:checked):has(#cb-09:checked):has(#cb-13:checked):has(#cb-17:checked):has(#cb-21:checked) .bingo-cell:has(#cb-05, #cb-09, #cb-13, #cb-17, #cb-21)::after
+        {
+            opacity: 1;
+        }
+
+        @keyframes rotating {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+        }
 
     </style>
 </head>
