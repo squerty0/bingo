@@ -115,21 +115,7 @@
             text-shadow: 1px 1px rgba(0,0,0,0.4);
         }
 
-        @media screen and (max-width: 720px) {
-            .bingo-cell > label{
-                font-size: 10px;
-                font-weight: 100;
-                padding: 5px;
-            }
 
-            .checked-box{
-                border: 2px solid white;
-                top: 1px;
-                bottom: 1px;
-                right: 1px;
-                left: 1px;
-            }
-        }
 
         .bingo-cell::after{
             position: absolute;
@@ -169,12 +155,37 @@
         }
 
         @keyframes rotating {
-        from {
-            transform: rotate(0deg);
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
-        to {
-            transform: rotate(360deg);
-        }
+
+        @media screen and (max-width: 720px) {
+            .bingo-cell > label{
+                font-size: 10px;
+                font-weight: 100;
+                padding: 5px;
+            }
+
+            .checked-box{
+                border: 2px solid white;
+                top: 1px;
+                bottom: 1px;
+                right: 1px;
+                left: 1px;
+            }
+
+            .bingo-cell::after{
+                top: 0px;
+                bottom: 0px;
+                right: 0px;
+                left: 0px;
+                border-top: 4px solid #1b1b1b;
+                border-left: 4px solid #1b1b1b;
+            }
         }
 
     </style>
